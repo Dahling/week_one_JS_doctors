@@ -1,27 +1,54 @@
+var apiKey = require('./../.env').apiKey;
 
 var Doctors = require('./../js/doctors.js').doctorsModule;
+
+var displayDoctors = function(medicalIssue, doctorData) {
+  $('.showDoctors').text("The doctors who specialize in " + medicalIssue + " are: ");
+};
+
+$(document).ready(function() {
+  var currentDoctorsObject = new Doctors ();
+  $('#symptom-doctors').click(function() {
+    var medicalIssue = $('#symptom-input').val();
+    $('#symptom-input').val("");
+    currentDoctorsObject.getDoctors(medicalIssue, displayDoctors);
+  });
+});
+
+exports.displayDoctorsFunction = displayDoctors;
+
+
+
+
+
+
+
+
+
+
+
 
 // var displayHumidity = function(city, humidityData) {
 //   $('.showWeather').text("The humidity in " + city + " is " + humidityData + "%");
 // }
-
-var displayDoctors = function(medicalIssue, doctorData) {
-  $('.showIssue').append('The medical issue you are concerned with is' + medicalIssue + "%");
-};
-
-$(document).ready(function() {
-  var newDoctors = new Doctors();
-
-  $('#doctor-form').submit(function(event) {
-    event.preventDefault();
-
-  $('#show-doctors').click(function() {
-    var medicalIssue = $('#medical-issue').val();
-    $('#medical-issue').val("");
-    currentDoctorsObject.getDoctors(medicalIssue, displayDoctors);
-    });
-  });
-});
+//
+// var displayDoctors = function(medicalIssue, doctorData) {
+//   $('.showIssue').append('The medical issue you are concerned with is' + medicalIssue + "%");
+// };
+//
+// $(document).ready(function() {
+//   var newDoctors = new Doctors();
+//
+//   $('#doctor-form').submit(function(event) {
+//     event.preventDefault();
+//
+//   $('#show-doctors').click(function() {
+//     var medicalIssue = $('#medical-issue').val();
+//     $('#medical-issue').val("");
+//     currentDoctorsObject.getDoctors(medicalIssue, displayDoctors);
+//     });
+//   });
+// });
 
 // var Calculator = require('./../js/backend.js').calculatorModule;
 //
