@@ -12,7 +12,7 @@ _This is an app to search for doctors, in accordance with the symptom (medical i
 ## Setup/Installation Requirements
 
 * _Clone this Repository onto your Desktop_
-Go to the terminal, and enter the following commands:
+* _Go to the terminal, and enter the following commands:_
 * _npm install_
 * _bower install_
 * _gulp build_
@@ -30,12 +30,12 @@ _If you have any tips or tricks, send me me a love letter: Jenna at SweetlySurpr
 ## Technologies Used
 
 
-    _HTML_
-    _CSS_
-    _Sass_
-    _JavaScript and bff, JQuery_
-    _Gulp_
-    _Browserify, Browser-sync, Bower_
+* _HTML_
+* _CSS_
+* _Sass_
+* _JavaScript and bff, JQuery_
+* _Gulp_
+* _Browserify, Browser-sync, Bower_
 
 ### License
 
