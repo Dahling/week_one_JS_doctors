@@ -1,5 +1,3 @@
-var apiKey = require('./../.env').apiKey;
-
 var Doctors = require('./../js/doctors.js').doctorsModule;
 
 var displayDoctors = function(medicalIssue, doctorData) {
@@ -7,11 +5,11 @@ var displayDoctors = function(medicalIssue, doctorData) {
 };
 
 $(document).ready(function() {
-  var currentDoctorsObject = new Doctors ();
+  var newDoctors = new Doctors ();
   $('#symptom-doctors').click(function() {
     var medicalIssue = $('#symptom-input').val();
     $('#symptom-input').val("");
-    currentDoctorsObject.getDoctors(medicalIssue, displayDoctors);
+    newDoctors.getDoctors(medicalIssue, displayDoctors);
   });
 });
 
