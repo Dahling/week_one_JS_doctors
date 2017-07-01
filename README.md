@@ -6,7 +6,7 @@
 
 ## Description
 
-_This is a play-pretend pizza company website, where a user can order a customized pizza by picking their preferences. Preferences include: different-sized pizzas, and all sort of toppings. The purpose of this project is to create object constructors with properties, using object-oriented Javascript._
+_This is an app to search for doctors, in accordance with the symptom (medical issue) you have._
 
 
 ## Setup/Installation Requirements
