@@ -1,20 +1,20 @@
-$gray : #d3d3d3;
-$green : #75B975;
+$white : #ffffff;
+
 
 .box {
-  background: $gray;
+  background: $white;
   border: 3px solid black;
   padding: 40px 80px;
   .button {
     font-weight: bold;
     text-align: center;
-    background: $green;
+    background: $white;
     color: white;
   }
 }
 
 #email {
-  background-color: hotpink;
+  background-color: blue;
 }
 
 input {
@@ -23,9 +23,14 @@ input {
 
 body {
   color: black;
-  background-color: hotpink;
+  background-color: $white;
 }
 
 .container {
   background-color: limegreen;
+}
+
+li, a {
+  list-style: none;
+  text-decoration: none;
 }

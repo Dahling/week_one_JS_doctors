@@ -9,24 +9,34 @@
   <body>
     <div class="container">
       <h1>Doctor, Doctor, Give Me The News</h1>
-      <div class="box">
-        <div class="row">
-          <div class="col-lg-12 col-md-6 col-sm-12">
-
-            <h2>Find a doctor to cure any ache and pain...</h2>
-            <!-- <form class="doctor-form"> -->
-
-              <label for="symptom-input">Enter a symptom:</label>
-              <input id="symptom-input" type="text">
-              <button class="btn-success" id="symptom-doctors">Doctor, Doctor, Cure My Blues!</button>
-              <div class="showDoctors"></div>
+      <form id="doctors-form">
 
 
-            <!-- </form> -->
+        <div class="box">
+          <div class="row">
+            <div class="col-lg-12 col-md-6 col-sm-12">
 
+              <h2>Find a doctor to cure any ache and pain...</h2>
+              <!-- <form class="doctor-form"> -->
+
+                <label for="symptomInput">Enter a symptom:</label>
+                <input id="symptomInput" type="text">
+                <button class="btn-success" id="symptom-doctors">Doctor, Doctor, Cure My Blues!</button>
+                <div class="showDoctors">
+                  <ul id="doctor-list">
+
+                  </ul>
+
+                </div>
+
+
+              <!-- </form> -->
+
+            </div>
           </div>
-        </div>
-      </div> <!--box-->
+        </div> <!--box-->
+
+      </form>
     </div> <!--container-->
   </body>
 </html>

@@ -1,20 +1,28 @@
 var Doctors = require('./../js/doctors.js').doctorsModule;
 
-var displayDoctors = function(medicalIssue, doctorData) {
-  $('.showDoctors').text("The doctors who specialize in " + medicalIssue + " are: ");
+var displayDoctors = function(results) {
+
+  results.data.forEach(function(results) {
+    $('#doctor-list').append('<br>'+'<li>' + results.practices[0].name + '</li>' + results.specialties[0].description + '<br>' + '<br>');
+// '<li><h4>Facility/Practitioner Name</h4></li>'
+  });
 };
 
 $(document).ready(function() {
   var newDoctors = new Doctors ();
-  $('#symptom-doctors').click(function() {
-    var medicalIssue = $('#symptom-input').val();
-    $('#symptom-input').val("");
-    newDoctors.getDoctors(medicalIssue, displayDoctors);
+  //Submit event for the form
+  $('#doctors-form').submit(function(event) {
+    event.preventDefault();
+
+    // Gather inputted info from form and store it into userInput
+    var symptomInput = $('#symptomInput').val();
+
+    $('doctor').empty();
+    newDoctors.getDoctors(symptomInput, displayDoctors);
   });
 });
 
-exports.displayDoctorsFunction = displayDoctors;
-
+// exports.displayDoctorsFunction = displayDoctors;
 
 
 
