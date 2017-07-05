@@ -2,37 +2,45 @@
   <head>
     <link rel="stylesheet" href="build/css/vendor.css">
     <link rel="stylesheet" href="build/css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Emilys+Candy" rel="stylesheet">
     <script src="build/js/vendor.min.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
     <title>Doctors</title>
   </head>
   <body>
     <div class="container">
-      <h1>Doctor, Doctor, Give Me The News</h1>
+      <h1>Doctor, Doctor, Give Me The News . . .</h1>
       <form id="doctors-form">
 
 
-        <div class="box">
+
           <div class="row">
             <div class="col-lg-12 col-md-6 col-sm-12">
 
-              <h2>Find a doctor to cure any ache and pain...</h2>
-              <!-- <form class="doctor-form"> -->
+              <div class="box">
+              <div id="input-field">
 
-                <label for="symptomInput">Enter a symptom:</label>
+
+                <label for="symptomInput">I've got a bad case of: </label>
                 <input id="symptomInput" type="text">
-                <button class="btn-success" id="symptom-doctors">Doctor, Doctor, Cure My Blues!</button>
-                <div class="showDoctors">
+                <br>
+                <button class="btn-success" id="symptom-doctors">Find a Doctor!</button>
+              </div> <!--input-field-->
+            <br>
+            <br>
+
+              <div class="showDoctors">
                   <ul id="doctor-list">
+                    
 
                   </ul>
 
-                </div>
-
+              </div>
+            </div> <!--box-->
 
               <!-- </form> -->
 
-            </div>
+
           </div>
         </div> <!--box-->
 
