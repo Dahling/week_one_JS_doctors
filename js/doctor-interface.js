@@ -3,7 +3,10 @@ var Doctors = require('./../js/doctors.js').doctorsModule;
 var displayDoctors = function(results) {
 
   results.data.forEach(function(results) {
-    $('#doctor-list').append('<br>'+'<li>' + '<h4> Factility/Practitioner: '+ '<h5><em>'+results.practices[0].name+'</em><h5>'+'</h4>' + '</li>' + '<h4> Specialization: '+ '<h5><em>'+results.specialties[0].description+'</em><h5>'+'</h4>' + '<br>' + '<br>');
+    $('#doctor-list').append('<br>'
+    +'<li>' + '<h3> Factility/Practitioner: '+ '<h4><em>'+results.practices[0].name+'</em><h4>'+'</h3>' + '</li>'
+    +'<li>' + '<h3> Phone Number: '+ '<h4><em>'+results.practices[0].phones[0].number+'</em><h4>'+'</h3>' + '</li>'
+    + '<h3> Specialization: '+ '<h4><em>'+results.specialties[0].description+'</em><h4>'+'</h3>' + '<br>');
 // '<li><h4>Facility/Practitioner Name</h4></li>'
   });
 };
